@@ -4,18 +4,26 @@
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
     <!--bootstrap & style links -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="tictactoe.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <link rel="stylesheet" href="tictactoe.css">
     <!-- link to JavaScript code -->
-    <script src="dom-tictactoe.js"></script>
+   
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Welcome to Tic Tac Toe</h1>
-        <p>Get ready to play!</p>
+        <h5>Welcome to Tic Tac Toe</h5>
+       
         <!-- uses the built-in onclick attribute to call the resetBoard function -->
-        <button onclick="resetBoard()" type="button" class="btn btn-primary btn-lg" name="button">Restart</button>
+        <button onclick="resetBoard()" type="button" class="btn btn-primary btn-lg" name="button">Restart Current Game</button>
+        <button onclick="resetBoard2()" type="button" class="btn btn-primary btn-lg" name="button">Restart Score</button>
+      <div id="names">
+        <label for="plyX">Name PlayerX</label>
+        <input id="plyX" type="text" maxlength="10">
+        <label for="plyO">Name PlayerO</label>
+        <input id="plyO" type="text" maxlength="10">
+      </div> <div id="score">Let's Get Started</div>
+      <div id="turn">Help</div>
       </div>
 
       <table align="center">
@@ -38,5 +46,6 @@
         </tr>
       </table>
     </div>
+    <script src="dom-tictactoe.js"></script>
   </body>
 </html>
