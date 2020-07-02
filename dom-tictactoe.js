@@ -70,9 +70,9 @@ const checkForWin = () => {
     if (currentMarker=='X'){
       score[0]++;
       //added setTimeout(s) to slow down if you win to allow board to populate
-      setTimeout (function(){window.alert(`Congrats ${playerX}, you won with Xs!`);},100);
-      setTimeout (function(){resetBoard();},2000);
-        
+       setTimeout (function(){window.alert(`Congrats ${playerX}, you won with Xs!`);},100);
+       setTimeout (function(){resetBoard();},2000);
+     
     }
     if (currentMarker=='O'){
       score[1]++;
