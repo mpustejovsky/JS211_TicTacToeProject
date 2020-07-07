@@ -108,11 +108,20 @@ const winnerMess = () => {
 
 const ticTacToe = (row, column) => {
     // Your code here to place a marker on the board
+
+    if ((row!=0 && row!=1 && row!=2) || (column!=0 && column!=1 && column!=2)){
+      console.log ("");
+      console.log ("");
+      console.log ("Input out of range.  Input must be 0, 1, or 2");
+      return;
+    }
+
     if (board[row][column]=='X'|| board[row][column]=='O')
       { console.log ("");
         console.log ("");
         console.log ("Spot already taken!!! Try again.");
         return;}
+    
     board[row][column]=playerTurn;
     if (playerTurn=='X'){playerTurn='O'}
     else {playerTurn="X"}
@@ -170,3 +179,5 @@ if (typeof describe === 'function') {
   getPrompt();
 
 }
+
+
